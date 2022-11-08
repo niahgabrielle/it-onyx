@@ -43,7 +43,7 @@ html {
   header.primary{
     background-color:#8FBDD9;
     padding:20px;
-    background-image:url ("assets/img/computer.jpg");
+    background-image:url ("../img/computer.jpeg");
     background-repeat: no-repeat;
     background-size:cover;
     display:flex;
