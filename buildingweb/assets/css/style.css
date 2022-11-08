@@ -1,0 +1,120 @@
+/* ---------------Box Sizing----------------- */
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body{
+    font-family: 'Fira Sans', sans-serif;
+    background-color:cornflowerblue;
+  }
+  
+  /*
+   ~Longform~
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  
+  ~Shorthand T | R | B | L~
+  margin:40px 10px 30px 15px;
+  
+  ~Shorthand~
+  margin:40px;
+  
+  ~Two Value Shorhand Top/Bottom | Left/Right~
+  margin:40px auto;
+  
+  */
+  main{
+    background-color:white;
+    width:80vw;
+    max-width:1140px;
+    margin:40px auto;
+    border:2px solid yellow;
+    border-radius:4px;
+  }
+  
+  header.primary{
+    background-color:#8FBDD9;
+    padding:20px;
+    background-image:url ("assets/img/computer.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    display:flex;
+    flex-direction:row;
+  }
+  
+  header.primary .hgroup{
+    width:60%;
+  }
+
+  .hgroup h1, .hgroup h2{
+    margin:0;
+  }
+  
+  .hgroup h1 a{
+    color:white;
+    text-shadow:1px 1px #000000;
+    font-size:2.5rem;
+    text-decoration:none;
+  }
+  
+  .hgroup h2{
+    color:#ffffff;
+    text-shadow:1px 1px #000000;
+    font-size:1.8rem;
+  }
+
+  header.primary nav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+
+  header.primary nav a{
+    display:block;
+    background-color:rgba(0,0,0,.5);
+    color:white;
+    padding:10px 10px 10px 0;
+    border:1px solid yellow;
+    margin-bottom:10px;
+    border-radius:20px 0;
+    border-right:10px;
+    text-decoration:none;
+    text-align:right;
+  }
+
+  header.primary nav a:hover{
+    background-color:rgba(0,0,0,1);
+    text-decoration:underline;
+  }
+
+#content{
+    line-height:1.5;
+}
+
+.container{
+    margin:auto;
+    padding:40px;
+}
+
+#content h2, #content h3{
+    border-left:8px solid lightsalmon;
+    padding:5px;
+    border-radius:15px 0;
+}
+
+.img-right{
+    float:right;
+    border:2px solid black;
+    padding:5px;
+    max-width:50%;
+    border-radius:20px 0;
+    margin:20px 0 20px 20px;
+}
