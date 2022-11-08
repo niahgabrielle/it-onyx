@@ -43,7 +43,7 @@ html {
   header.primary{
     background-color:#8FBDD9;
     padding:20px;
-    background-image:url ("../img/computer.jpeg");
+    background-image:url(../img/computer.jpeg);
     background-repeat: no-repeat;
     background-size:cover;
     display:flex;
@@ -59,14 +59,14 @@ html {
   }
   
   .hgroup h1 a{
-    color:white;
+    color:black;
     text-shadow:1px 1px #000000;
     font-size:2.5rem;
     text-decoration:none;
   }
   
   .hgroup h2{
-    color:#ffffff;
+    color:black;
     text-shadow:1px 1px #000000;
     font-size:1.8rem;
   }
@@ -82,7 +82,7 @@ html {
     background-color:rgba(0,0,0,.5);
     color:white;
     padding:10px 10px 10px 0;
-    border:1px solid yellow;
+    border:1px solid black;
     margin-bottom:10px;
     border-radius:20px 0;
     border-right:10px;
