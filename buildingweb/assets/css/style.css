@@ -14,6 +14,9 @@ html {
     background-color:cornflowerblue;
   }
   
+  img{
+    max-width:100%;
+  }
   /*
    ~Longform~
   margin-top: 40px;
@@ -104,7 +107,7 @@ html {
     padding:40px;
 }
 
-#content h2, #content h3{
+#content h2, #content h3, aside h2{
     border-left:8px solid lightsalmon;
     padding:5px;
     border-radius:15px 0;
@@ -134,12 +137,49 @@ html {
   margin-left:20px;
 }
 
-article.post{
+#blog article.post{
   background:white;
   margin:20px;
   padding:20px;
+  display:grid;
+  grid-template-columns:1fr 3fr;
+  grid-template-areas: 
+    "figure header"
+    "figure post-content"
+    "figure footer";
+    grid-gap:20px;
 }
 
 #blog figure{
   margin:0;
+  grid-area:figure;
+}
+
+#blog header{
+  grid-area:header;
+}
+
+#blog .post-content{
+  grid-area:post-content;
+}
+
+#blog footer{
+  grid-area:footer;
+}
+
+aside .container{
+  display:flex;
+}
+
+aside .widget{
+  flex:0 0 50%;
+}
+
+aside .widget:first-of-type{
+  border-right:1px dashed black;
+  padding-right:40px;
+}
+
+aside .widget:last-of-type{
+  padding-left:40px;
 }
