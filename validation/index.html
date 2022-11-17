@@ -8,52 +8,39 @@
 <h1>New Patient Registration</h1>
 <h3>Please fill out the form below</h3>
   <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-    <label for="Name">First Name:</label>
-    <input type="text" id="Name" name="First Name" size="30" maxlength="30">
-    <input type="text" id="Name" name="Phone Number" size="14" maxlength="14">
-    </form>
+    <label for="First Name">First Name:</label>
+    <input type="text" id="First Name" name="First Name" size="30" maxlength="30"
+       data-rule-required="true"  data-msg-required="First Name is Required" 
+       data-rule-number="true" data-msg-number="Age must be a number in years"
+       data-rule-min="18" data-msg-min="Age must be greater than or equal to 18 years"
+       data-rule-max="65" data-msg-max="Age must be less than or equal to 65 years">
+        <label for="Age" class="error"></label><br>
+        <label for="Middle Initial">Middle Initial:</label>
+        <input type="text" id="Middle Initial" name="Middle Initial" size="1" maxlength="1"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Middle Initial:</label>
-        <input type="text" id="middle" name="Middle Initial" size="1" maxlength="1">
-        </form>
+        <label for="Last Name">Last Name:</label>
+        <input type="text" id="Last Name" name="Last Name" size="30" maxlength="30"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Last Name:</label>
-        <input type="text" id="last" name="Last Name" size="30" maxlength="30">
-        </form>
+        <label for="Email">Email:</label>
+        <input type="text" id="Email" name="Email" size="30" maxlength="30"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Email:</label>
-        <input type="text" id="email" name="Email" size="30" maxlength="30">
-        </form>
+        <label for="Sex">Sex:</label>
+        <label for="Male"><input type="radio" name="male" id="male" value="male">Male</label>
+        <label for="Female"><input type="radio" name="female" id="female" value="female">Female</label>
+        <label for="N/A"><input type="radio" name="n/a" id="n/a" value="n/a">N/A</label><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Sex:</label>
-        <input type="text" id="sex" name="Sex" size="30" maxlength="30">
-        </form>
+        <label for="Birthday">Birthday:</label>
+        <input type="text" id="Birthday" name="Birthday" size="8" maxlength="8"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Birthday:</label>
-        <input type="text" id="birthday" name="Birthday" size="8" maxlength="8">
-        </form>
+        <label for="Height">Height (inches):</label>
+        <input type="text" id="Height" name="Height" size="3" maxlength="3"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Height (inches):</label>
-        <input type="text" id="height" name="Height" size="3" maxlength="3">
-        </form>
+        <label for="Weight">Weight (pounds):</label>
+        <input type="text" id="Weight" name="Weight" size="3" maxlength="3"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Weight (pounds):</label>
-        <input type="text" id="weight" name="Weight" size="3" maxlength="3">
-        </form>
+        <label for="Phone Number">Phone Number:</label>
+        <input type="text" id="number" name="Phone Number" size="14" maxlength="14"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Phone Number:</label>
-        <input type="text" id="number" name="Phone Number" size="14" maxlength="14">
-        </form>
-
-    <form id="SelectExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
         <label>Marital Status:</label>
             <select name="Auto" id="Auto">
                 <option value="">Select a Status</option>
@@ -62,30 +49,27 @@
                 <option value="D">Divorced</option>
                 <option value="L">Legally Separated</option>
                 <option value="W">Widow</option>
-            </select>
-            </form>
+            </select><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">Address:</label>
-        <input type="text" id="addy" name="Address" size="30" maxlength="30">
-        </form>
+        <label for="Address">Address:</label>
+        <input type="text" id="addy" name="Address" size="30" maxlength="30"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <input type="submit" value="SubmitExample" Name="SubmitButton">
-        <label for="Name">City/State/Zip:</label>
-        <input type="text" id="city" name="City" size="30" maxlength="30">
-        </form>
+        <label for="City/State/Zip">City/State/Zip:</label>
+        <input type="text" id="city" name="City" size="30" maxlength="30"><br>
 
-    <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <label for="Name">State:</label>
-        <input type="text" id="state" name="State" size="3" maxlength="3">
-        </form>
+        <label for="State">State:</label>
+        <input type="text" id="state" name="State" size="3" maxlength="3"><br>
 
-    <form id="ResetExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-        <input type="reset" value="ResetExample" Name="ResetButton">
-        <label for="Address">Address: </label>
-        <input type="text" id="Address" name="Address">
+        <label for="Address">Address:</label>
+        <input type="text" id="Address" name="Address"><br>
+        
+        <input type="submit" value="Submit Patient Form" Name="SubmitButton">
         </form>
+        <script>
+            $( "#SubmitExampleValidateForm" ).validate({
+            
+            });
+            </script>
     </body>
 </head>
 </html>
