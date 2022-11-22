@@ -18,6 +18,10 @@ html {
   label, input {
     display:block;
   }
+
+  img{
+    max-width:100%;
+  }
   
   header h1{
     text-align:center;
