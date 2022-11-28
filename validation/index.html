@@ -8,21 +8,44 @@
 <h1>New Patient Registration</h1>
 <h3>Please fill out the form below</h3>
   <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-    <label for="First Name">First Name:</label>
-    <input type="text" id="First Name" name="First Name" size="30" maxlength="30"
-       data-rule-required="true"  data-msg-required="First Name is Required" 
-       data-rule-number="true" data-msg-number="Age must be a number in years"
-       data-rule-min="18" data-msg-min="Age must be greater than or equal to 18 years"
-       data-rule-max="65" data-msg-max="Age must be less than or equal to 65 years">
-        <label for="Age" class="error"></label><br>
+        <label for="First Name">First Name:</label>
+        <input type="text" id="First Name" name="First Name" size="30" maxlength="30"
+        data-rule-required="true"  data-msg-required="First Name is Required" 
+        data-rule-min="2" data-msg-min="First Name must be greater than or equal to 2 characters"
+        data-rule-max="20" data-msg-max="First Name must be less than or equal to 20 characters">
+
+        <label for="First Name" class="error"></label><br>
+        </form>
+        <script>
+        $( "#SubmitExampleValidateForm" ).validate({
+
+        });
+        </script>
+
         <label for="Middle Initial">Middle Initial:</label>
-        <input type="text" id="Middle Initial" name="Middle Initial" size="1" maxlength="1"><br>
+        <input type="text" id="Middle Initial" name="Middle Initial" size="1" maxlength="1"
+        data-rule-number="true" data-msg-number="Middle Initial must be one character"
+        data-rule-max="1" data-msg-max="Middle Initial must be less than or equal to 20 characters">
+
+        <label for="Middle Initial" class="error"></label><br>
+        </form>
+        <script>
+        $( "#SubmitExampleValidateForm" ).validate({
+
+        });
+        </script>
+
 
         <label for="Last Name">Last Name:</label>
-        <input type="text" id="Last Name" name="Last Name" size="30" maxlength="30"><br>
+        <input type="text" id="Last Name" name="Last Name" size="30" maxlength="30"
+        data-rule-required="true"  data-msg-required="Last Name is Required" 
+        data-rule-min="2" data-msg-min="Last Name must be greater than or equal to 2 characters"
+        data-rule-max="20" data-msg-max="Last Name must be less than or equal to 20 characters"><br>
 
         <label for="Email">Email:</label>
-        <input type="text" id="Email" name="Email" size="30" maxlength="30"><br>
+        <input type="text" id="Email" name="Email" size="30" maxlength="30"
+        data-rule-required="true"  data-msg-required="Email is Required" 
+        data-rule-email="true" data-msg-email="Invalid Email"><br>
 
         <label for="Sex">Sex:</label>
         <label for="Male"><input type="radio" name="male" id="male" value="male">Male</label>
@@ -30,7 +53,9 @@
         <label for="N/A"><input type="radio" name="n/a" id="n/a" value="n/a">N/A</label><br>
 
         <label for="Birthday">Birthday:</label>
-        <input type="text" id="Birthday" name="Birthday" size="8" maxlength="8"><br>
+        <input type="text" id="Birthday" name="Birthday" size="8" maxlength="8"
+        data-rule-required="true"  data-msg-required="Birthday is Required" 
+        data-rule-date="true" data-msg-date="Date must be MM/DD/YYYY format"><br>
 
         <label for="Height">Height (inches):</label>
         <input type="text" id="Height" name="Height" size="3" maxlength="3"><br>
@@ -39,7 +64,9 @@
         <input type="text" id="Weight" name="Weight" size="3" maxlength="3"><br>
 
         <label for="Phone Number">Phone Number:</label>
-        <input type="text" id="number" name="Phone Number" size="14" maxlength="14"><br>
+        <input type="text" id="number" name="Phone Number" size="14" maxlength="14"
+        data-rule-required="true"  data-msg-required="Number is Required" 
+        data-rule-digits="true" data-rule-phoneUS="true" data-msg-phoneUS="Invalid Phone Number"><br>
 
         <label>Marital Status:</label>
             <select name="Auto" id="Auto">
@@ -52,16 +79,76 @@
             </select><br>
 
         <label for="Address">Address:</label>
-        <input type="text" id="addy" name="Address" size="30" maxlength="30"><br>
+        <input type="text" id="addy" name="Address" size="30" maxlength="30"
+        data-rule-required="true" data-msg-required="Address is Required"><br>
 
         <label for="City/State/Zip">City/State/Zip:</label>
-        <input type="text" id="city" name="City" size="30" maxlength="30"><br>
+        <input type="text" id="city" name="City" size="30" maxlength="30">
+        <select name="Select a State" id="Select a State">
+          <option value="">Select a State</option>
+          <option value="AL">Alabama</option>
+          <option value="M">Alaska</option>
+          <option value="D">Arizona</option>
+          <option value="L">Arkansas</option>
+          <option value="W">California</option>
+          <option value="W">Colorado</option>
+          <option value="W">Connecticut</option>
+          <option value="W">Delaware</option>
+          <option value="W">Florida</option>
+          <option value="W">Georgia</option>
+          <option value="W">Hawaii</option>
+          <option value="W">Idaho</option>
+          <option value="W">Illinois</option>
+          <option value="W">Indiana</option>
+          <option value="AL">Iowa</option>
+          <option value="M">Kansas</option>
+          <option value="D">Kentucky</option>
+          <option value="L">Louisiana</option>
+          <option value="W">Maine</option>
+          <option value="W">Maryland</option>
+          <option value="W">Massachusetts</option>
+          <option value="W">Michigan</option>
+          <option value="W">Minnesota</option>
+          <option value="W">Mississippi</option>
+          <option value="W">Missouri</option>
+          <option value="W">Montana</option>
+          <option value="W">Nebraska</option>
+          <option value="W">Nevada</option>
+          <option value="W">New Hampshire</option>
+          <option value="W">New Jersey</option>
+          <option value="W">New Mexico</option>
+          <option value="W">New York</option>
+          <option value="W">North Carolina</option>
+          <option value="W">North Dakota</option>
+          <option value="AL">Ohio</option>
+          <option value="M">Oklahoma</option>
+          <option value="D">Oregon</option>
+          <option value="L">Pennsylvania</option>
+          <option value="W">Rhode Island</option>
+          <option value="W">South Carolina</option>
+          <option value="W">South Dakota</option>
+          <option value="W">Tennessee</option>
+          <option value="W">Texas</option>
+          <option value="W">Utah</option>
+          <option value="W">Vermont</option>
+          <option value="W">Virginia</option>
+          <option value="W">Washington</option>
+          <option value="W">Washington DC</option>
+          <option value="W">West Virginia</option>
+          <option value="W">Wisconsin</option>
+          <option value="W">Wyoming</option>
+        </select>
 
-        <label for="State">State:</label>
-        <input type="text" id="state" name="State" size="3" maxlength="3"><br>
+        <label for="Zip"></label>
+        <input type="text" id="zip" name="Zip" size="5" maxlength="5"
+        data-rule-required="true" data-rule-digits="true"><br>
 
-        <label for="Address">Address:</label>
-        <input type="text" id="Address" name="Address"><br>
+        <label for="Taking Medications">Taking Medications:</label>
+        <label for="Yes"><input type="radio" name="yes" id="yes" value="yes">Yes</label>
+        <label for="No"><input type="radio" name="no" id="no" value="no">No</label><br>
+
+        <label for="If yes, list medications here">If yes, list medications here:</label>
+        <input type="text" id="medication list" name="medication list" size="100" maxlength="100"><br>
         
         <input type="submit" value="Submit Patient Form" Name="SubmitButton">
         </form>
@@ -70,6 +157,9 @@
             
             });
             </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
     </body>
 </head>
 </html>
