@@ -7,34 +7,22 @@
 <body>
 <h1>New Patient Registration</h1>
 <h3>Please fill out the form below</h3>
-  <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+  <form id="sthompsonForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
         <label for="First Name">First Name:</label>
         <input type="text" id="First Name" name="First Name" size="30" maxlength="30"
         data-rule-required="true"  data-msg-required="First Name is Required" 
         data-rule-min="2" data-msg-min="First Name must be greater than or equal to 2 characters"
         data-rule-max="20" data-msg-max="First Name must be less than or equal to 20 characters">
-
         <label for="First Name" class="error"></label><br>
-        </form>
-        <script>
-        $( "#SubmitExampleValidateForm" ).validate({
-
-        });
-        </script>
 
         <label for="Middle Initial">Middle Initial:</label>
         <input type="text" id="Middle Initial" name="Middle Initial" size="1" maxlength="1"
         data-rule-number="true" data-msg-number="Middle Initial must be one character"
         data-rule-max="1" data-msg-max="Middle Initial must be less than or equal to 20 characters">
-
         <label for="Middle Initial" class="error"></label><br>
-        </form>
-        <script>
-        $( "#SubmitExampleValidateForm" ).validate({
-
-        });
-        </script>
-
 
         <label for="Last Name">Last Name:</label>
         <input type="text" id="Last Name" name="Last Name" size="30" maxlength="30"
@@ -50,18 +38,32 @@
         <label for="Sex">Sex:</label>
         <label for="Male"><input type="radio" name="male" id="male" value="male">Male</label>
         <label for="Female"><input type="radio" name="female" id="female" value="female">Female</label>
-        <label for="N/A"><input type="radio" name="n/a" id="n/a" value="n/a">N/A</label><br>
+        <label for="N/A"><input type="radio" name="n/a" id="n/a" value="n/a">N/A</label
+        data-rule-required="true"  data-msg-required="Sex is Required">
+        <label for="mycar" class="error"></label>
+        <script>
+        $( "#RadioExampleValidateForm" ).validate({
+        });
+        </script><br>
 
-        <label for="Birthday">Birthday:</label>
+        <label for="Birthday">Birthday (MM/DD/YYYY):</label>
         <input type="text" id="Birthday" name="Birthday" size="8" maxlength="8"
         data-rule-required="true"  data-msg-required="Birthday is Required" 
         data-rule-date="true" data-msg-date="Date must be MM/DD/YYYY format"><br>
 
         <label for="Height">Height (inches):</label>
-        <input type="text" id="Height" name="Height" size="3" maxlength="3"><br>
+        <input type="text" id="Height" name="Height" size="3" maxlength="3"
+        data-rule-required="true"  data-msg-required="Height is Required"
+        data-rule-number="true" data-msg-number="Height must be in inches"
+        data-rule-min="12" data-msg-min="Height must be greater than or equal to 12 inches"
+        data-rule-max="120" data-msg-max="Height must be less than or equal to 120 inches"><br>
 
         <label for="Weight">Weight (pounds):</label>
-        <input type="text" id="Weight" name="Weight" size="3" maxlength="3"><br>
+        <input type="text" id="Weight" name="Weight" size="3" maxlength="3"
+        data-rule-required="true"  data-msg-required="Weight is Required"
+        data-rule-number="true" data-msg-number="Weight must be in pounds"
+        data-rule-min="10" data-msg-min="Weight must be greater than or equal to 10 pounds"
+        data-rule-max="500" data-msg-max="Weight must be less than or equal to 500 pounds"><br>
 
         <label for="Phone Number">Phone Number:</label>
         <input type="text" id="number" name="Phone Number" size="14" maxlength="14"
@@ -76,7 +78,8 @@
                 <option value="D">Divorced</option>
                 <option value="L">Legally Separated</option>
                 <option value="W">Widow</option>
-            </select><br>
+            </select
+            data-rule-required="true"  data-msg-required="Marital Status is Required"><br>
 
         <label for="Address">Address:</label>
         <input type="text" id="addy" name="Address" size="30" maxlength="30"
@@ -148,18 +151,15 @@
         <label for="No"><input type="radio" name="no" id="no" value="no">No</label><br>
 
         <label for="If yes, list medications here">If yes, list medications here:</label>
-        <input type="text" id="medication list" name="medication list" size="100" maxlength="100"><br>
+        <input type="text" id="medication list" name="medication list" size="50" maxlength="50"><br>
         
         <input type="submit" value="Submit Patient Form" Name="SubmitButton">
-        </form>
         <script>
-            $( "#SubmitExampleValidateForm" ).validate({
+            $( "#sthompsonForm" ).validate({
             
             });
-            </script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+        </script>
+        </form>
     </body>
 </head>
 </html>
