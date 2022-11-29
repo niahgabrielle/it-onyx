@@ -36,15 +36,10 @@
         data-rule-email="true" data-msg-email="Invalid Email"><br>
 
         <label for="Sex">Sex:</label>
-        <label for="Male"><input type="radio" name="male" id="male" value="male">Male</label>
-        <label for="Female"><input type="radio" name="female" id="female" value="female">Female</label>
-        <label for="N/A"><input type="radio" name="n/a" id="n/a" value="n/a">N/A</label
-        data-rule-required="true"  data-msg-required="Sex is Required">
-        <label for="mycar" class="error"></label>
-        <script>
-        $( "#RadioExampleValidateForm" ).validate({
-        });
-        </script><br>
+        <label for="Male"><input type="radio" name="sex" id="male" value="male"
+        data-rule-required="true"  data-msg-required="Sex is Required">Male</label>
+        <label for="Female"><input type="radio" name="sex" id="female" value="female">Female</label>
+        <label for="N/A"><input type="radio" name="sex" id="n/a" value="n/a">N/A</label><br>
 
         <label for="Birthday">Birthday (MM/DD/YYYY):</label>
         <input type="text" id="Birthday" name="Birthday" size="8" maxlength="8"
@@ -147,8 +142,9 @@
         data-rule-required="true" data-rule-digits="true"><br>
 
         <label for="Taking Medications">Taking Medications:</label>
-        <label for="Yes"><input type="radio" name="yes" id="yes" value="yes">Yes</label>
-        <label for="No"><input type="radio" name="no" id="no" value="no">No</label><br>
+        <label for="Yes"><input type="radio" name="meds" id="yes" value="yes"
+        data-rule-required="true" data-msg-required="Taking Medications is Required"/>Yes</label>
+        <label for="No"><input type="radio" name="meds" id="no" value="no">No</label><br>
 
         <label for="If yes, list medications here">If yes, list medications here:</label>
         <input type="text" id="medication list" name="medication list" size="50" maxlength="50"><br>
