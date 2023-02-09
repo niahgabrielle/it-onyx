@@ -27,20 +27,20 @@
             <br><br>
       
             <label class="formlabel">Operator: </label>
-            <label for="Operator" class="error" id="OperatorError"></label>
             <label for="PlusOperator">
-                <input type="radio" name="PlusOperator" id="PlusOperator" value="Min"
-                    data-rule-required="true" data-msg-required="Operator is Required"/>+
+                <input type="radio" name="Operator" id="PlusOperator" value="Plus" 
+                data-rule-required="true" data-msg-required="Operator is Required"/>+
             </label>
             <label for="MinusOperator">
-                <input type="radio" name="MinusOperator" id="MinusOperator" value="Max">-
+                <input type="radio" name="Operator" id="MinusOperator" value="Minus">-
             </label>
             <label for="TimesOperator">
-                <input type="radio" name="TimesOperator" id="TimesOperator" value="Avg">*
+                <input type="radio" name="Operator" id="TimesOperator" value="Times">*
             </label>
             <label for="DivideOperator">
-                <input type="radio" name="DivideOperator" id="DivideOperator" value="Avg">/
+                <input type="radio" name="Operator" id="DivideOperator" value="Divide">/
             </label>
+            <label for="Operator" class="error" id="OperatorError"></label>
         <br><br>
 
             <label class="formlabel" for="Operand2">Operand 2: </label>
@@ -60,6 +60,6 @@
         </fieldset>
     </div>
 </form>
-<script src="assets/scripts/minmaxavg.js"></script>
+<script src="assets/script/minmaxavg.js"></script>
 </body>
 </html>
