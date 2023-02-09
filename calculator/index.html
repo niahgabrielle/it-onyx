@@ -13,7 +13,7 @@
 </head>
 <body>
 <form id="myform">
-    <div class="formcontainer" onsubmit="return false">
+    <div class="formcontainer" onsubmit="return result">
         <h1>Javascript Calculator</h1>
         <fieldset id="detail">
             <legend>Calculator</legend>  
@@ -27,6 +27,7 @@
             <br><br>
       
             <label class="formlabel">Operator: </label>
+            <label for="Operator" class="error" id="OperatorError"></label>
             <label for="PlusOperator">
                 <input type="radio" name="PlusOperator" id="PlusOperator" value="Min"
                     data-rule-required="true" data-msg-required="Operator is Required"/>+
@@ -40,7 +41,6 @@
             <label for="DivideOperator">
                 <input type="radio" name="DivideOperator" id="DivideOperator" value="Avg">/
             </label>
-        <label for="Operator" class="error" id="OperatorError"></label>
         <br><br>
 
             <label class="formlabel" for="Operand2">Operand 2: </label>

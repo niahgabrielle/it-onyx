@@ -68,10 +68,10 @@ function clearform() {
     document.getElementById("Operand1Error").innerHTML = "";
     document.getElementById("OperatorError").innerHTML = "";
     document.getElementById("Operand2Error").innerHTML = "";
-    document.getElementById("PlusOperator").checked = false;
-    document.getElementById("MinusOperator").checked = false;
-    document.getElementById("TimesOperator").checked = false;
-    document.getElementById("DivideError").innerHTML = "";
+    document.getElementById("PlusOperator").checked = result;
+    document.getElementById("MinusOperator").checked = result;
+    document.getElementById("TimesOperator").checked = result;
+    document.getElementById("DivideOperator").checked = result;
     document.getElementById("Result").innerHTML = "";
 }
 
