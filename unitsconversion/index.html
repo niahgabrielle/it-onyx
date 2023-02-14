@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="AJAX">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Saniah Thompson">
+    <title>Unit Converter (AJAX)</title>
+    <link rel="stylesheet" type="text/css" href="assets/style/conversion.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+</head>
+<body>
+<form id="myform">
+    <div class="formcontainer" onsubmit="return false">
+        <h1>Unit Converter (AJAX)</h1>
+        <fieldset id="detail">
+            <legend>Unit Converter (AJAX)</legend>  
+            <br>
+            
+            <label class="formlabel" for="Operand1">From Value: </label>
+            <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15"       
+                   data-rule-required="true"  data-msg-required="Value is Required" 
+                   data-rule-number="true" data-msg-number="Value must be a Number">
+            <label class="error" for="Value" id="ValueError"></label>
+            <br><br>
+
+            <label class="formlabel">From Unit: </label>
+                <label for="FromUnitOperator">
+                <input type="radio" name="Operator" id="CentOperator" value="Cent"
+                data-rule-required="true" data-msg-required="From Unit is Required"/>centimeters
+            </label>
+                <label for="MeterOperator">
+                <input type="radio" name="Operator" id="MeterOperator" value="Meter">meters
+            </label>
+                <label for="KiloOperator">
+                <input type="radio" name="Operator" id="KiloOperator" value="Kilo">kilometers
+            </label>
+                <label for="InchOperator">
+                <input type="radio" name="Operator" id="InchOperator" value="Inch">inches
+            </label>
+                <label for="FeetOperator">
+                <input type="radio" name="Operator" id="FeetOperator" value="Feet">feet
+            </label>
+                <label for="YardOperator">
+                <input type="radio" name="Operator" id="YardOperator" value="Yard">yards
+            </label>
+                <label for="MileOperator">
+                <input type="radio" name="Operator" id="MileOperator" value="Mile">miles
+            </label>
+            <label for="FromUnitOperator" class="error" id="FromUnitOperatorError"></label>
+            <br><br>
+
+            <label class="formlabel">To Unit: </label>
+                <label for="ToUnitOperator">
+                <input type="radio" name="Operator" id="CentOperator" value="Cent"
+                data-rule-required="true" data-msg-required="To Unit is Required"/>centimeters
+            </label>
+                <label for="MeterOperator">
+                <input type="radio" name="Operator" id="MeterOperator" value="Meter">meters
+            </label>
+                <label for="KiloOperator">
+                <input type="radio" name="Operator" id="KiloOperator" value="Kilo">kilometers
+            </label>
+                <label for="InchOperator">
+                <input type="radio" name="Operator" id="InchOperator" value="Inch">inches
+            </label>
+                <label for="FeetOperator">
+                <input type="radio" name="Operator" id="FeetOperator" value="Feet">feet
+            </label>
+                <label for="YardOperator">
+                <input type="radio" name="Operator" id="YardOperator" value="Yard">yards
+            </label>
+                <label for="MileOperator">
+                <input type="radio" name="Operator" id="MileOperator" value="Mile">miles
+            </label>
+            <label for="ToUnitOperator" class="error" id="ToUnitOperatorError"></label>
+            <br><br>
+
+            <label class="formlabel">To Value: </label>
+                <label for="ToValueOperator">
+            <span id="Result"></span>
+            <br><br>
+
+            <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
+            <input type="button" value="Clear" name="Clear" onclick="clearform();" novalidate>
+
+        </fieldset>
+    </div>
+</form>
+<script src="assets/script/conversion.js"></script>
+</body>
+</html>
