@@ -14,9 +14,23 @@ body{
     padding:200px;
     position:relative;
   }
+
+  header.primary{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+  }
   
-.logo{
+#logo{
   max-width:100%;
   height:auto;
   text-align:left;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+nav ul{
+  display:flex;
+  justify-content: space-around;
+
 }
