@@ -139,9 +139,6 @@ function ClearForm() {
     document.getElementById("StockSymbol").value = "";
     document.getElementById("FromDate").value = "";
     document.getElementById("ToDate").value = "";
-    document.getElementById("company").innerHTML = "";
-    document.getElementById("address").innerHTML = "";
-    document.getElementById("employees").innerHTML = "";
     document.getElementById("ceo").innerHTML = "";
     document.getElementById("url").innerHTML = "";
     document.getElementById("url").href = "";
