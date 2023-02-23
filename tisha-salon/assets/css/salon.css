@@ -15,22 +15,25 @@ body{
     position:relative;
   }
 
-  header.primary{
+  /*  header.primary{
     display:grid;
     grid-template-columns: 150px 1fr;
   }
+  do this if wanting logo on left side of nav
+  */
   
 #logo{
   max-width:100%;
   height:auto;
-  text-align:left;
-  position:absolute;
-  top:0px;
-  left:0px;
+  text-align:center;
 }
 
 nav ul{
   display:flex;
   justify-content: space-around;
+  font-size:30px;
+}
 
+#team article{
+  width:30%;
 }
