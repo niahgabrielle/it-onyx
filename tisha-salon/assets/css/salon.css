@@ -15,6 +15,9 @@ body{
     position:relative;
   }
 
+  img{
+    max-width:100%;
+  }
   /*  header.primary{
     display:grid;
     grid-template-columns: 150px 1fr;
@@ -36,7 +39,9 @@ nav ul{
 
 #team{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-template-columns:repeat(1,4fr);
+}
+
+article.post h2{
+  color:black;
 }
