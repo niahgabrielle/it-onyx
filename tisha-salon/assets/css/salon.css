@@ -42,8 +42,12 @@ nav ul{
 
 #team{
   display:grid;
-  grid-template-rows:repeat(2,2fr);
+  grid-template-columns:repeat(2,2fr);
   background-color: #FFE6EA;
+}
+
+#team img{
+  max-width:100%;
 }
 
 article.post h2{
