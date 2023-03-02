@@ -10,87 +10,34 @@ async function GetStock() {
     // If all of the form elements are valid, the get the form values
     if (form.valid()) {
         
-        var StockSymbol = document.getElementById("StockSymbol").value;
-        var apiKey = "35eaVfKsObXpSg2O4kMLj9udr2DgVW1f"
+        var apiKey = "fOxc0Drc_HGjBiTz8dp6xdDPxNgTxrmb"
         var FromDate = document.getElementById("FromDate").value;
         var ToDate = document.getElementById("ToDate").value;
+        var BaseCurrency= document.getElementById("basecurrency").value;
+        var ToCurrency= document.getElementById("tocurrency").value;
 
         /* URL for AJAX Call */
-        var myURL1 = "https://api.polygon.io/v3/reference/tickers/" + StockSymbol + "?apiKey=" + apiKey;
-        /* Make the AJAX call */
+        var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + BaseCurrency + ToCurrency + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" + apiKey;
         var msg1Object = await fetch(myURL1);
         /* Check the status */
-        if (msg1Object.status >= 200 && msg1Object.status <= 299) {            
+        if (msg1Object.status >= 200 && msg1Object.status <= 299) {  
             var msg1JSONText = await msg1Object.text();
-            // Parse the JSON string into an object
-            var msg1 = JSON.parse(msg1JSONText);
-            /* Your code to process the result goes here - 
-               display the returned message */
-            document.getElementById("company").innerHTML = msg1.results.name;
-            document.getElementById("address").innerHTML = msg1.results.address.address1 + ", " + msg1.results.address.city + ", " 
-                + msg1.results.address.state + "   " + msg1.results.address.postal_code;
-            document.getElementById("employees").innerHTML = msg1.results.total_employees;
-            document.getElementById("description").innerHTML = msg1.results.sic_description;
-            document.getElementById("url").innerHTML = msg1.results.homepage_url;
-            document.getElementById("url").href = msg1.results.homepage_url;
-        }
-        else {
-            /* AJAX complete with error - probably invalid stock ticker symbol */
-                /* Your code to process the result goes here - 
-                   display the returned message */
-            alert("Stock Not Found - Status: " + msg1Object.status)
-            return;
-        }        
- 
-        /* URL for AJAX Call */
-        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/" + StockSymbol + "/range/1/day/" + FromDate + "/" + ToDate + "?unadjusted=false&sort=asc&limit=32&apiKey=" + apiKey;
-        /* Make the AJAX call */
-        var msg2Object = await fetch(myURL2);
-        /* Check the status */
-        if (msg2Object.status >= 200 && msg2Object.status <= 299) {            
-            var msg2JSONText = await msg2Object.text();
-            // Parse the JSON string into an object
-            var msg2 = JSON.parse(msg2JSONText);
-            /* Your code to process the result goes here - 
-               display the returned message */
-                /* Your code to process the result goes here  
-                    display the returned message */
+            // Parse the JSON string into an oject
+            var msg1 =JSON.parse(msg1JSONText);          
                 var stockdate = [];
                 var stockvalue = [];
-                var stockvolume = [];
-                var numdays = msg2.results.length;
+                var numdays = msg1.results.length;
                 if (numdays > 0) {
                     for (var i = 0; i < numdays; i++) {
                         /* stock close value */
-                        stockvalue[i] = msg2.results[i].c;
-                        /* stock volume */
-                        stockvolume[i] = msg2.results[i].v;
+                        stockvalue[i] = msg1.results[i].c;
                         /* date is in Unix milleseconds - create a temporary date variable */
-                        var tempdate = new Date(msg2.results[i].t);
+                        var tempdate = new Date(msg1.results[i].t);
                         /* extract the date string from the value */
                         stockdate[i] = tempdate.toLocaleDateString();
                     }
                 }
 
-                var stockvaluetable = "";
-                if (numdays > 0) {
-                    stockvaluetable = stockvaluetable + "<table><caption>Stock Price</caption><tr><th>Date</th><th>Price</th></tr>";
-                    for (var i = 0; i < numdays; i++) {
-                        stockvaluetable = stockvaluetable + "<tr><td>" + stockdate[i] + "</td><td>" + stockvalue[i] + "</td></tr>";
-                    }
-                    stockvaluetable = stockvaluetable + "</table>"
-                    document.getElementById("StockValueTable").innerHTML = stockvaluetable;
-                }
-                
-                var stockvolumetable = "";
-                if (numdays > 0) {
-                    stockvolumetable = stockvolumetable + "<table><caption>Stock Volume</caption><tr><th>Date</th><th>Volume</th></tr>";
-                    for (var i = 0; i < numdays; i++) {
-                        stockvolumetable = stockvolumetable + "<tr><td>" + stockdate[i] + "</td><td>" + stockvolume[i] + "</td></tr>";
-                    }
-                    stockvolumetable = stockvolumetable + "</table>"
-                    document.getElementById("StockVolumeTable").innerHTML = stockvolumetable;
-                }
 
                 var ctx0 = document.getElementById("chartjs-0");
                 var myChart = new Chart(ctx0, {
@@ -107,25 +54,7 @@ async function GetStock() {
                             maintainAspectRatio: true,
                         }
                     }
-                );
-                
-                var ctx1 = document.getElementById("chartjs-1");
-                var myChart = new Chart(ctx1, {
-                    "type":"line",
-                    "data": {
-                        "labels": stockdate,
-                        "datasets":[{"label":"Stock Volume",
-                        "data": stockvolume,
-                        "fill":false,
-                        "borderColor":"rgb(75, 192, 192)",
-                        "lineTension":0.1}]},
-                        "options":{ 
-                            responsive: false,
-                            maintainAspectRatio: true,
-                        }
-                    }
-                );
-            
+                );            
         }
         else {
             /* AJAX completed with error - probably invalid stock ticker symbol */

@@ -1,5 +1,5 @@
 body{
-    background-color:darkgray;
+    background-color:lightsteelblue;
 }
 
 img{
@@ -11,6 +11,15 @@ img{
     width:70vw;
     /* Set Max Content Width */
     max-width:700px;
+}
+
+.logo{
+    max-width: 100%;
+    height:auto;
+}
+
+h3{
+    text-align: center;
 }
 
 /* Customize Previous/Next/Dots/Autoplay */
