@@ -11,10 +11,8 @@ async function GetStock() {
     if (form.valid()) {
         
         var apiKey = "fOxc0Drc_HGjBiTz8dp6xdDPxNgTxrmb"
-        var FromDate = document.getElementById("FromDate").value;
-        var ToDate = document.getElementById("ToDate").value;
-        var BaseCurrency= document.getElementById("basecurrency").value;
-        var ToCurrency= document.getElementById("tocurrency").value;
+        var Rover = document.getElementById("Rover").value;
+        var PictureDate = document.getElementById("PictureDate").value;
 
         /* URL for AJAX Call */
         var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + BaseCurrency + ToCurrency + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" + apiKey;
@@ -65,8 +63,8 @@ async function GetStock() {
 }
 
 function ClearForm() {
-    document.getElementById("FromDate").value = "";
-    document.getElementById("ToDate").value = "";
+    document.getElementById("Rover").value = "";
+    document.getElementById("PictureDate").value = "";
     document.getElementById("ceo").innerHTML = "";
     document.getElementById("url").innerHTML = "";
     document.getElementById("url").href = "";
