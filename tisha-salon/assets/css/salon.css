@@ -50,6 +50,16 @@ nav ul{
   max-width:100%;
 }
 
+#services{
+  border: 20px;
+}
+
+section,p, #services ul,ol,h2,h3,h4,h5,h6{
+  border:2px solid #ccc;
+  margin:20px;
+  padding:20px;
+}
+
 article.post h2{
   color:black;
 }
