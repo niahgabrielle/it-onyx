@@ -46,15 +46,12 @@ nav ul{
   background-color: #FFE6EA;
 }
 
-#team img{
-  max-width:100%;
-}
-
 #services{
   border: 20px;
+  text-align: center;
 }
 
-section,p, #services ul,ol,h2,h3,h4,h5,h6{
+section,ol,h6, #team, #services, #contact{
   border:2px solid #ccc;
   margin:20px;
   padding:20px;
@@ -62,6 +59,32 @@ section,p, #services ul,ol,h2,h3,h4,h5,h6{
 
 article.post h2{
   color:black;
+}
+
+#content article.post{
+  width:30%;
+  box-shadow:0 4px 8px rgba(0,0,0,.3);
+  padding:3%;
+  font-size:13px;
+  border-radius:15px;
+  transition:.7s;
+}
+
+#content article.post:hover{
+  box-shadow: 0 8px 16px rgba(0,0,0,.5);
+}
+
+article.post img{
+  border-radius:15px;
+  margin:auto;
+}
+
+article.post a{
+    color:palevioletred;
+}
+
+article.post a:hover, article.post a:active{
+  text-decoration:none;
 }
 
 /*---------NAVIGATION---------*/
