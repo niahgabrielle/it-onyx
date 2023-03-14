@@ -15,7 +15,7 @@ async function GetStock() {
         var PictureDate = document.getElementById("PictureDate").value;
 
         /* URL for AJAX Call */
-        var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + BaseCurrency + ToCurrency + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" + apiKey;
+        var myURL1 = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos:" + "/range/1/day/" + Rover + "/" + PictureDate + "?earth_date=2015-6-3&apiKey=" + apiKey;
         var msg1Object = await fetch(myURL1);
         /* Check the status */
         if (msg1Object.status >= 200 && msg1Object.status <= 299) {  
