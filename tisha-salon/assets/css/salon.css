@@ -26,6 +26,7 @@ header{
 
 img{
   max-width:100%;
+  height:auto;
 }
 
 #logo{
@@ -40,21 +41,10 @@ nav ul{
   font-size:30px;
 }
 
-/*
 #team{
   display:grid;
   grid-template-columns:repeat(2,2fr);
   background-color: #FFE6EA;
-}
-*/
-
-#team.container{
-  display:flex;
-  flex-direction:row;
-  justify-content:space-between;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #a1b0c4;
-  padding:0 0 200px 0;
 }
 
 #services{
