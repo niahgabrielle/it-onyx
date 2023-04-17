@@ -20,17 +20,14 @@ main{
   margin:auto;
 }
 
-
 header.primary{
   background-color: #EAE1D9;
   padding:20px;
   background-repeat: no-repeat;
   background-size:cover;
-  display:flex;
-  flex-direction: row;
+  overflow:hidden;
+  flex-direction:row;
   }
-
-
 
 #nav {
   overflow: hidden;
