@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+img{
+  max-width:100%;
+}
+
 .container{
   margin:auto;
   padding: 0 40px 40px 40px;
@@ -207,6 +211,44 @@ padding:0;
 @keyframes fade{
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/*about page css*/
+.accordion {
+  background-color:  #79845B;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 30px;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.active, .accordion:hover {
+  background-color: #5a6148;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.faq_container {
+  background-color:  #79845B;
+}
+
+.faq_container h2{
+  text-align: center;
+  color: #ffffff;
+  font-style: normal;
+  text-transform: capitalize;
+  font-size: 60px;
 }
 
 .footer{
