@@ -1,64 +1,64 @@
 *{
-    margin:0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 img{
-  max-width:100%;
+max-width:100%;
 }
 
 .container{
-  margin:auto;
-  padding: 0 40px 40px 40px;
-  }
+margin:auto;
+padding: 0 40px 40px 40px;
+}
 
 
 body{
-  background-color: #65333A;
-  font-family: 'Roboto', sans-serif;
+background-color: #65333A;
+font-family: 'Roboto', sans-serif;
 }
 
 main{
-  background-color: #C4AF9B;
-  width:80vw;
-  max-width:1140px;
-  margin:auto;
+background-color: #C4AF9B;
+width:80vw;
+max-width:1140px;
+margin:auto;
 }
 
 header.primary{
-  background-color: #EAE1D9;
-  padding:20px;
-  background-repeat: no-repeat;
-  background-size:cover;
-  overflow:hidden;
-  flex-direction:row;
-  }
+background-color: #EAE1D9;
+padding:20px;
+background-repeat: no-repeat;
+background-size:cover;
+overflow:hidden;
+flex-direction:row;
+}
 
 #nav {
-  overflow: hidden;
-  background-color: EAE1D9;
-  padding: 10px;
-  
+overflow: hidden;
+background-color: EAE1D9;
+padding: 10px;
+
 }
 
 /* Style the header links */
 #nav a {
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+color: black;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+line-height: 25px;
+border-radius: 4px;
 }
 
 
 /* Change the background color on mouse-over */
 #nav a:hover {
-    background-color: #65333A;
-    color: white;
-  }
+  background-color: #65333A;
+  color: white;
+}
 
 /* Float the link section to the right */
 
@@ -66,189 +66,48 @@ header.primary nav ul{
 list-style-type: none;
 padding:0;
 }
- 
+
 .logo{
-  float:left;
-      max-width: 200px;
-      height: auto;
-  }
-
-  .header-right {
-    float: right;
-  }
-
-
-.jumbotron{
-    height: 300px;
-    display: flex;
-    margin:auto;
-    align-items: center;
-    justify-content: center;
+float:left;
+    max-width: 200px;
+    height: auto;
 }
 
-.jumbotron .jumbotron-inner{
-    width: 70%;
+.header-right {
+  float: right;
 }
 
-
-.jumbotron .jumbotron-inner p{
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.jumbotron .jumbotron-inner .jumbotron-btn{
-   display: flex;
-   justify-content: center;
-   
-}
-
-.jumbotron .jumbotron-inner .jumbotron-btn .btn-one{
-   padding: 8px 14px;
-   border-radius: 5px;
-   background-color: #79845B;
-   color: #f1f1f1;
-   margin-right: 10px;
-  margin-top: 10px;
-}
-
-   .jumbotron .jumbotron-inner .jumbotron-btn .btn-two{
-    padding: 8px 14px;
-    border-radius: 5px;
-    background-color: #79845B;
-    color: #f1f1f1;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
-
-    .jumbo-img{
-      float:right;
-      width:300px;
-      height:auto;
-  }
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  clear: left
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover{
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text{
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext{
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot{
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover{
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade{
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade{
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/*about page css*/
-.accordion {
-  background-color:  #79845B;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 30px;
-  transition: 0.4s;
-  text-align: center;
-}
-
-.active, .accordion:hover {
-  background-color: #5a6148;
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-
-.faq_container {
-  background-color:  #79845B;
-}
-
-.faq_container h2{
+.contact-banner{
+  background-color: #181c1f;
   text-align: center;
   color: #ffffff;
-  font-style: normal;
-  text-transform: capitalize;
-  font-size: 60px;
+  text-shadow: 2px 2px #000000;
+  /* Shorhand T,R,B,L*/
+  padding: 6em 2em;
+  position: relative;
+}
+
+.contact-banner::before{
+  content: "";
+  background-image: url("../img/contact.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .9;
+}
+
+.contact-banner h1{
+  font-size: 4.2rem;
+  text-transform:uppercase;
+  margin: 50px 10px 20px 10px;
+  position: relative;
+}
+
+.container{
+  padding:0px;
 }
 
 .footer{
@@ -259,7 +118,7 @@ padding:0;
 
 /* Style the header links */
 .footer a {
-  float: left;
+  float: right;
   color: black;
   text-align: center;
   padding: 12px;
@@ -278,7 +137,7 @@ padding:0;
 
 /* Float the link section to the right */
 .footer-right {
-  float: right;
+  display:block;
 }
 .clearfix {
   overflow: auto;
@@ -286,6 +145,7 @@ padding:0;
 
 /* Style all font awesome icons */
 .fa{
+  float: right;
   padding:20px;
   font-size:30px;
   width:50px;
@@ -348,3 +208,4 @@ padding:0;
       height: auto;
   }
   }
+  
