@@ -1,73 +1,79 @@
-*{
+html{
+  box-sizing: border-box; 
+ }
+
+ *, *:before, *:after{
   margin:0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
+padding: 0px;
+   box-sizing: inherit;
+ }
 
 .container{
 margin:auto;
 padding: 0 40px 40px 40px;
 }
 
+
 body{
-  background-color: #65333A;
-  font-family: 'Roboto', sans-serif;
+background-color: #65333A;
+font-family: 'Roboto', sans-serif;
 }
 
 main{
-  background-color: #C4AF9B;
-  max-width:1140px;
-  margin:auto;
+background-color: #C4AF9B;
+max-width:1140px;
+margin:auto;
 }
 
-
 header.primary{
-  background-color: #EAE1D9;
-  padding:20px;
-  background-repeat: no-repeat;
-  background-size:cover;
-  flex-direction: row;
-  overflow: hidden;
-  }
+background-color: #EAE1D9;
+padding:20px;
+background-repeat: no-repeat;
+background-size:cover;
+flex-direction: row;
+overflow: hidden;
+}
 
 #nav {
   overflow: hidden;
   background-color: EAE1D9;
   padding: 10px;
+  }
+  
+  #nav a {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
 }
-
-/* Style the header links */
-#nav a {
-color: black;
-text-align: center;
-padding: 12px;
-text-decoration: none;
-font-size: 18px;
-line-height: 25px;
-border-radius: 4px;
-}
-
-/* Change the background color on mouse-over */
+  
 #nav a:hover {
   background-color: #65333A;
   color: white;
-}
+}  
 
-/* Float the link section to the right */
 
 header.primary nav ul{
 list-style-type: none;
 padding:0;
 }
 
-.logo{
-float:left;
-    max-width: 200px;
-    height: auto;
+header.logo{
+  float: left;
+  max-width: 200px;
+  height: auto;
 }
 
-.header-right {
-  float: right;
+.logo{
+  max-width: 200px;
+  height: auto;
+}
+
+.header-right{
+  float:right;
 }
 
 .jumbotron{
@@ -77,6 +83,10 @@ float:left;
   margin-top: 20px;
   align-items: center;
   justify-content: center;
+}
+
+.jumbotron h1, p{
+  min-width:30%;
 }
 
 .jumbotron h1{
@@ -95,35 +105,35 @@ float:left;
 }
 
 .jumbotron .jumbotron-inner .jumbotron-btn{
- display: flex;
- justify-content: center;
- 
-}
-.jumbotron .jumbotron-inner .jumbotron-btn .btn-one{
-  padding: 8px 14px;
-  border-radius: 5px;
-  background-color: #79845B;
-  color: #f1f1f1;
-  margin-right: 10px;
-  margin-top: 10px;
-  text-decoration: none;}
-
- .jumbotron .jumbotron-inner .jumbotron-btn .btn-two{
-  padding: 8px 14px;
-  border-radius: 5px;
-  background-color: #79845B;
-  color: #f1f1f1;
-  margin-right: 10px;
-  margin-top: 10px;
-  text-decoration: none;}
-
-.jumbo-img{
-  float:right;
-  width:300px;
-  height:auto;
+  display: flex;
+  justify-content: center;
+  
+  
  }
+ .jumbotron .jumbotron-inner .jumbotron-btn .btn-one{
+  padding: 8px 14px;
+  border-radius: 5px;
+  background-color: #79845B;
+  color: #f1f1f1;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-decoration: none;}
+ 
+  .jumbotron .jumbotron-inner .jumbotron-btn .btn-two{
+   padding: 8px 14px;
+   border-radius: 5px;
+   background-color: #79845B;
+   color: #f1f1f1;
+   margin-right: 10px;
+   margin-top: 10px;
+   text-decoration: none;}
+ 
+   .jumbo-img{
+     float:right;
+     width:50%;
+     height:auto;
+     }
 
-     /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
   position: relative;
@@ -131,12 +141,10 @@ float:left;
   clear: left
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -205,6 +213,32 @@ float:left;
   animation-duration: 1.5s;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+iframe{
+  width: 100%;
+  margin: 0 auto;
+ }
+
+.weatherwidget-io{
+  width: 100%;
+}
+
+.map{
+  font-size: 4.2rem;
+  text-transform:uppercase;
+  text-shadow: 2px 2px #000000;
+  background-color: #CB7637;
+  text-align: center;
+  color:white;
+  padding-top: 15px;
+  }
+  
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
@@ -480,27 +514,6 @@ left: 50%;
 transform: translate(-50%, -50%);
 color: white;
 font-size: 3em;
-}
-
-.flex-container {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center
-}
-
-
-.img-container {
-background-color: #EAE1D9;
-margin: 20px;}
-
-iframe{
-width: 100%;
-margin: 0 auto;
-}
-
-.weatherwidget-io{
-width: 100%;
 }
 
 .about-banner{
