@@ -1,22 +1,35 @@
-.formcontainer {
-    width: 1000px;
-    padding: 5px;
+html{
+  box-sizing: border-box;
 }
 
-.formlabel {
-    display: inline-block;
-    width: 100px;
-    text-align: right;
-    padding: 5px;
+*,*:before,*:after{
+  box-sizing: inherit;
 }
 
-.error {
-    color: red;
-    padding-left: 5px;
+img{
+  max-width: 50%;
+  height: auto;
 }
 
-table {
-    border-collapse: collapse
+.formcontainer{
+    width:1000px;
+    padding:5px;
+}
+
+.formlabel{
+    display:inline-block;
+    width:150px;
+    text-align:right;
+    padding:5px;
+}
+
+.error{
+  color: red;
+  padding-left:5px;
+}
+
+table{
+  border-collapse:collapse;
 }
 
 th, td {
@@ -25,18 +38,19 @@ th, td {
   border: 1px solid black;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+tr:nth-child(even){
+  background-color: #f2f2f2;
 }
 
-.img-container {
-  float: left;
-  width: 40%;
-  padding: 20px;
+img{
+  padding:5px;
+  width:150px; 
+  height:150px;
+  visibility:hidden;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.clearfix::after{
+  content:"";
+  clear:both;
+  display:table;
 }
